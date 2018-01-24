@@ -5,7 +5,9 @@ defmodule ChildWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ChildWeb do
+  scope "/", ChildWeb do
     pipe_through :api
+
+    get "/other", OtherController, :index
   end
 end

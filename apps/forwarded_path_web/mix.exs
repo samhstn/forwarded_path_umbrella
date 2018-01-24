@@ -41,6 +41,7 @@ defmodule ForwardedPathWeb.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:forwarded_path, in_umbrella: true},
+      {:child, in_umbrella: true},
       {:cowboy, "~> 1.0"}
     ]
   end

@@ -5,7 +5,9 @@ defmodule ForwardedPathWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ForwardedPathWeb do
+  scope "/" do
     pipe_through :api
+
+    forward "/child", ChildWeb.Router
   end
 end
